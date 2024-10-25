@@ -1,0 +1,38 @@
+Kiri Moto Settings
+
+Paths:
+- Layer Height = 0.2
+- Top Layers = 5
+- Base Layers = 2
+
+Shells:
+- (no changes)
+
+Sparse Fill:
+- Fill Type = hex
+- Fill Amt = 0.1
+- Fill Overlap = 0.35
+- Print Speed = 0
+- Finish Speed = 0
+- Solid Expand = 0
+- Solid Angle = 45
+
+Heating:
+- Nozzle Temp = 200
+- Bed = 70
+
+Base:
+- Layer Height = 0.2
+- Nozzle Temp = 0
+- Bed Temp = 0
+- Shell Speed = 10
+- Fill Speed = 35
+
+Support:
+- (No Changes)
+- Enclosed = Yes
+
+Output:
+- Print SPeed = 80
+- Finish Speed = 50
+- Move Speed = 150
