@@ -4,7 +4,7 @@ module link_end() {
     
     difference() {
         hull() {
-        cylinder(h=4, r=4, center=true);
+        cylinder(h=4, r=4.2, center=true);
         translate([6,0,0])
             cube([12,4,4], center=true);
         }
