@@ -1,1 +1,0 @@
-1/10 Truck body ZIL 157 by Meuh974 on Thingiverse: https://www.thingiverse.com/thing:3532450
