@@ -32,11 +32,11 @@ difference() {
 translate([-5,-1.5,.01]) cube([49,11,8]);
 
 //pins
-translate([-5.5,7,3.2])
+translate([-5.5,7.2,3.2])
   pin();
 translate([-5.5,2.5,3.2])
   pin();
-translate([37.5,7,3.2])
+translate([37.5,7.2,3.2])
   pin();
 translate([37.5,2.5,3.2])
   pin();
