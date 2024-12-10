@@ -1,9 +1,10 @@
 // Clock Base
-
+use <BOSL/shapes.scad>
 $fn=64;
 
 difference() {
-cube([120,50,10], center=true);
+//cube([120,50,10], center=true);
+cuboid([120,50,10], fillet=2);
 
 //4mm bolt hole
 cylinder(h=12,d=4.2, center=true);
