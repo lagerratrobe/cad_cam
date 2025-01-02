@@ -2,11 +2,20 @@
 
 module lg_nongon() {
 translate([0,-.25,0])
-  rotate([-90,10,0])
+  rotate([-90,0,0])
+  cylinder(d1=9, 
+           d2=12.5, 
+           h=16.5, 
+           $fn=8);    
+}
+
+module sm_nongon() {
+translate([0,-.25,0])
+  rotate([-90,0,0])
   cylinder(d1=8, 
            d2=12, 
            h=16.5, 
-           $fn=9);    
+           $fn=8);    
 }
 
 module beam() {
