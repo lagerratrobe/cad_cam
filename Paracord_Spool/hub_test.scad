@@ -2,7 +2,7 @@
 $fn=100;
 
 module hub() {
-    cylinder(h=8,d=25.85);
+    cylinder(h=8,d=25.9);
     cylinder(h=3,d=35);
 }
 
