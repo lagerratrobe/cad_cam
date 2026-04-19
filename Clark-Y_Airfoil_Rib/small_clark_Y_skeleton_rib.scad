@@ -1,7 +1,5 @@
 use <Round-Anything-master/roundAnythingExamples.scad>
 
-$fn=100;
-
 // Clark-Y Airfoil Coordinates
 airfoil_points = [
     // --- Upper surface: trailing edge to leading edge ---
@@ -43,46 +41,15 @@ airfoil_points = [
     [1.0000,  0.0000],  // trailing edge (flat bottom meets upper)
 ];
 
-/*module wing_rib(chord, width) {
-    linear_extrude(height = width) {
-        scale([chord, chord, 1]) {
+chord = 100;
+
+linear_extrude(height = 2) {
+shell2d(0,-2) {
+    intersection() {
+scale([chord, chord, 1]) {
             polygon(points = airfoil_points);
+            }
         }
-    }
-}*/
-
-module wing_rib(chord, width, skin = 2) {
-    linear_extrude(height = width) {
-        difference() {
-            scale([chord, chord, 1])
-                polygon(points = airfoil_points);
-            offset(delta = -skin)
-                scale([chord, chord, 1])
-                    polygon(points = airfoil_points);
-        }
+gridpattern(iter=12);
     }
 }
-
-/*module smooth(r = .5) {
-    offset(delta = r)
-        offset(delta = -r)
-            children();
-}
-
-module wing_rib(chord, width, skin = 2) {
-    linear_extrude(height = width) {
-        difference() {
-            smooth()
-                scale([chord, chord, 1])
-                    polygon(points = airfoil_points);
-            offset(delta = -skin)
-                smooth()
-                    scale([chord, chord, 1])
-                        polygon(points = airfoil_points);
-        }
-    }
-}*/
-
-// 2026-04-18 Render
-wing_rib(chord = 150, width = 3);
-
