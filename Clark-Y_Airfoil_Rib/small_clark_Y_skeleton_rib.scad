@@ -41,15 +41,26 @@ airfoil_points = [
     [1.0000,  0.0000],  // trailing edge (flat bottom meets upper)
 ];
 
-chord = 100;
+module wing_rib(chord, height) {
+  linear_extrude(height = height) {
+  shell2d(0,-2) {
+      intersection() {
+  scale([chord, chord, 1]) {
+              polygon(points = airfoil_points);
+              }
+          }
+  gridpattern(iter=12);
+      }
+  }
+}
 
-linear_extrude(height = 2) {
-shell2d(0,-2) {
-    intersection() {
-scale([chord, chord, 1]) {
-            polygon(points = airfoil_points);
-            }
-        }
-gridpattern(iter=12);
-    }
+chord = 100;
+height = 2;
+
+//Cut spar slot
+difference() {
+wing_rib(chord, height);
+
+translate([20,0,-1])
+    cube([5,3,10]);
 }
