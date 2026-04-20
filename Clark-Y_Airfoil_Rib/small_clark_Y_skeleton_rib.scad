@@ -57,10 +57,32 @@ module wing_rib(chord, height) {
 chord = 100;
 height = 2;
 
+module bottom_spar() {
+    translate([20,0,-1])
+    cube([5,2.5,10]);
+}
+
+module top_spar() { 
+translate([31.5,9.175,-1])
+rotate([0,0,-1.96])
+  cube([5,2.5,15]);
+}
+
+module leading_edge() {
+translate([0,2.5,-1])
+  cube([2.5,2.5,15]);
+}
+
+module trailing_edge() {
+translate([91.15,0,-1])
+  cube([9,2.5,15]);
+}
+
 //Cut spar slot
 difference() {
 wing_rib(chord, height);
-
-translate([20,0,-1])
-    cube([5,3,10]);
+    #bottom_spar();
+    #top_spar();
+    #leading_edge();
+    #trailing_edge();
 }
