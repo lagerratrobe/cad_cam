@@ -47,7 +47,7 @@ raw_points = [
 
 smooth_points = chaikin(raw_points, 2);
 
-scale_factor = 2.255;
+scale_factor = 4;
 
 module fuse_profile_1() {
 scale([scale_factor, scale_factor, 1])
